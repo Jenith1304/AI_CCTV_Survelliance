@@ -1,0 +1,62 @@
+.email-config-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background-color: #f9f9fb;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.instructions-box {
+    background: #fff8e1;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.instructions-box ul {
+    padding-left: 20px;
+}
+
+.form-section input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.form-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.config-box {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}

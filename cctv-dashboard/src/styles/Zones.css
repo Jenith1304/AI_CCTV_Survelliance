@@ -1,0 +1,76 @@
+.zones-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.zone-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.zone-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.zone-form button {
+    grid-column: span 2;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.zone-form button:hover {
+    background-color: #45a049;
+}
+
+.zone-list {
+    display: grid;
+    gap: 16px;
+}
+
+.zone-card {
+    background-color: #f4f6f8;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.zone-card h4 {
+    margin: 0 0 10px;
+}
+
+.zone-card button {
+    background: #e74c3c;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.zone-card button:hover {
+    background-color: #c0392b;
+}
+
+.error-msg {
+    color: red;
+    font-weight: bold;
+}

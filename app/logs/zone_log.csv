@@ -1,0 +1,67 @@
+Time,Zone,Face_ID,Helmet,Event
+2025-07-08 20:50:24,Machine_1,Face_0,No Helmet,Entered
+2025-07-08 20:50:27,Machine_1,Face_0,No Helmet,Exited
+2025-07-08 20:50:54,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 20:50:59,Machine_2,Face_0,Helmet,Exited
+2025-07-08 21:10:27,Machine_2,Face_0,Helmet,Entered
+2025-07-08 21:10:27,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:15:36,Machine_2,Face_0,Helmet,Entered
+2025-07-08 21:15:38,Machine_2,Face_0,Helmet,Exited
+2025-07-08 21:15:39,Machine_2,Face_0,Helmet,Entered
+2025-07-08 21:15:39,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:15:45,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:15:47,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:15:48,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:15:48,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:15:51,Machine_2,Face_1,No Helmet,Entered
+2025-07-08 21:15:51,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:15:52,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:15:52,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:15:53,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:15:54,Machine_2,Face_1,No Helmet,Exited
+2025-07-08 21:15:59,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:16:03,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:16:03,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:16:16,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:16:16,Machine_2,Face_1,No Helmet,Entered
+2025-07-08 21:16:17,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:16:35,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:16:35,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:16:35,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:16:35,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:16:36,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:16:36,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:16:36,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:16:37,Machine_2,Face_0,Helmet,Entered
+2025-07-08 21:16:37,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:16:37,Machine_2,Face_0,Helmet,Entered
+2025-07-08 21:16:38,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:16:39,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:16:57,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:16:57,Machine_2,Face_1,No Helmet,Exited
+2025-07-08 21:16:57,Machine_2,Face_2,No Helmet,Entered
+2025-07-08 21:16:59,Machine_2,Face_1,No Helmet,Entered
+2025-07-08 21:16:59,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:17:00,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:17:01,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:17:02,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:17:02,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:17:03,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:17:05,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:17:06,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:17:07,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:17:07,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:17:07,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:17:08,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:17:08,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:17:09,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:17:11,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:17:11,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:17:18,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:17:22,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:17:23,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:17:39,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:17:39,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:17:46,Machine_2,Face_0,No Helmet,Exited
+2025-07-08 21:17:47,Machine_2,Face_0,No Helmet,Entered
+2025-07-08 21:17:53,Machine_2,Face_0,Helmet,Exited

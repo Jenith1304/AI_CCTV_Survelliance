@@ -1,0 +1,95 @@
+.livestream-container {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.livestream-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.stream-input-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.stream-input-card input {
+    padding: 0.7rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.stream-input-card button {
+    padding: 0.7rem;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.stream-input-card button:hover {
+    background-color: #2980b9;
+}
+
+.error-msg {
+    color: red;
+    font-weight: 500;
+}
+
+.stream-frame {
+    margin-top: 1.5rem;
+}
+
+.video-frame {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+    .livestream-title {
+        font-size: 1.5rem;
+    }
+
+    .stream-input-card {
+        padding: 1rem;
+    }
+
+    .stream-input-card input,
+    .stream-input-card button {
+        font-size: 0.95rem;
+    }
+}
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.reset-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}

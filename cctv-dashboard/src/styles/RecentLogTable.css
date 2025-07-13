@@ -1,0 +1,70 @@
+.table-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.recent-log-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recent-log-table th,
+.recent-log-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.recent-log-table thead {
+  background-color: #f5f5f5;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+.badge-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.badge-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.badge-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.badge-warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.badge-dark {
+  background-color: #d6d8d9;
+  color: #1b1e21;
+}
+
+.badge-neutral {
+  background-color: #f4f4f4;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .recent-log-table th,
+  .recent-log-table td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+}

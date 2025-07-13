@@ -1,0 +1,106 @@
+<!-- templates/index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Helmet Detection</title>
+</head>
+<body>
+    <h1>AI Surveillance System</h1>
+
+    <h2>Live CCTV Stream</h2>
+    <img src="{{ url_for('video_feed') }}" width="640" />
+
+    <h2>Upload Image</h2>
+    <form action="/upload-image" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" />
+        <button type="submit">Detect</button>
+    </form>
+
+    <h2>Upload Video</h2>
+    <form action="/upload-video" method="post" enctype="multipart/form-data">
+        <input type="file" name="video" />
+        <button type="submit">Detect</button>
+    </form>
+</body>
+</html>
+
+ -->
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Helmet Detection</title>
+  </head>
+  <body>
+    <h2>Set Camera URL</h2>
+    <form method="POST" action="/set-camera-url">
+      <input
+        type="text"
+        name="camera_url"
+        placeholder="Enter your camera URL"
+      />
+      <button type="submit">Set</button>
+    </form>
+
+    <h2>Upload Image</h2>
+    <form action="/upload-image" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" />
+      <button type="submit">Upload</button>
+    </form>
+
+    <h2>Upload Video</h2>
+    <form action="/upload-video" method="post" enctype="multipart/form-data">
+      <input type="file" name="video" />
+      <button type="submit">Upload</button>
+    </form>
+
+    <h2>Live Video Stream</h2>
+    <img src="{{ url_for('video_feed') }}" width="640" height="480" />
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AI CCTV Surveillance</title>
+  </head>
+  <body>
+    <h1>Helmet Detection & Operator Monitoring</h1>
+
+    <h2>Set Camera Feed</h2>
+    <form action="/set-camera-url" method="POST">
+      <input
+        type="text"
+        name="camera_url"
+        placeholder="Enter IP Camera URL"
+        required
+      />
+      <button type="submit">Set Live Feed</button>
+    </form>
+    <br />
+    <a href="/video_feed" target="_blank">▶️ Open Live Feed</a>
+
+    <hr />
+
+    <h2>Upload Image</h2>
+    <form action="/upload-image" method="POST" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/*" required />
+      <button type="submit">Upload Image</button>
+    </form>
+
+    <hr />
+
+    <h2>Upload Video</h2>
+    <form action="/upload-video" method="POST" enctype="multipart/form-data">
+      <input type="file" name="video" accept="video/*" required />
+      <button type="submit">Upload Video</button>
+    </form>
+
+    <form action="/set-email-credentials" method="POST">
+      Sender Email: <input name="sender" /><br />
+      App Password: <input name="password" type="password" /><br />
+      Receiver Email: <input name="receiver" /><br />
+      <button type="submit">Save Email Config</button>
+    </form>
+  </body>
+</html>
