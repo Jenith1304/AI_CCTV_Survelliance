@@ -6,9 +6,6 @@ services:
       cd cctv-dashboard && npm install && npm run build
       mkdir -p app/static
       cp -r dist/* ../app/static/
-    startCommand: gunicorn app:app
-    envVars:
-      - key: FLASK_ENV
-        value: production
     autoDeploy: true
     region: oregon
+    startCommand: gunicorn main:app --chdir app
