@@ -1,39 +1,38 @@
-/* File: src/styles/Login.css */
+/* File: src/styles/Register.css */
 
 body {
- 
-    
+   
 }
 
-.login-container {
+.register-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 1rem;
+     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: #fff;
-       margin: 0;
 }
 
-.login-form {
+.register-form {
     background-color: #ffffff10;
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     color: #fff;
 }
 
-.login-form h2 {
+.register-form h2 {
     text-align: center;
     margin-bottom: 1.5rem;
 }
 
-.login-form input {
+.register-form input {
     width: 100%;
     padding: 0.75rem;
     margin-bottom: 1rem;
@@ -43,14 +42,14 @@ body {
     color: #fff;
 }
 
-.login-form input::placeholder {
+.register-form input::placeholder {
     color: #ccc;
 }
 
-.login-form button {
+.register-form button {
     width: 100%;
     padding: 0.75rem;
-    background-color: #3498db;
+    background-color: #27ae60;
     color: white;
     border: none;
     border-radius: 8px;
@@ -60,29 +59,29 @@ body {
     transition: background-color 0.3s;
 }
 
-.login-form button:hover {
-    background-color: #2980b9;
+.register-form button:hover {
+    background-color: #1e8449;
 }
 
-.login-footer {
+.register-footer {
     text-align: center;
     margin-top: 1rem;
     font-size: 0.9rem;
 }
 
-.login-footer a {
+.register-footer a {
     color: #fff;
     font-weight: bold;
     text-decoration: underline;
 }
 
-@media (max-width: 480px) {
-    .login-form {
+@media (max-width: 500px) {
+    .register-form {
         padding: 1.5rem;
     }
 
-    .login-form input,
-    .login-form button {
+    .register-form input,
+    .register-form button {
         font-size: 0.95rem;
     }
 }

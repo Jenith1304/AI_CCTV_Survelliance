@@ -1,41 +1,43 @@
-// File: src/pages/Login.jsx
+// File: src/pages/Register.jsx
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import api, { setAuthToken } from '../utils/api';
-import '../styles/Login.css';
+import api from '../utils/api';
+import '../styles/Register.css';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Login = () => {
+const Register = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [confirm, setConfirm] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        if (password !== confirm) {
+            return toast.error("Passwords don't match");
+        }
+
         try {
-            const res = await api.post('/auth/login', {
+            await api.post('/auth/register', {
                 username: email,
                 password,
             });
-            const token = res.data.token;
-            localStorage.setItem('token', token);
-            setAuthToken(token);
-            toast.success('Login successful!');
-            setTimeout(() => navigate('/dashboard'), 1500);
+            toast.success('Registration successful!');
+            setTimeout(() => navigate('/login'), 1500);
         } catch (err) {
-            const message = err.response?.data?.error || 'Invalid credentials';
+            const message = err.response?.data?.error || 'User already exists';
             toast.error(message);
         }
     };
 
     return (
-        <div className="login-container">
+        <div className="register-container">
             <ToastContainer />
-            <form className="login-form" onSubmit={handleSubmit}>
-                <h2>🔐 Login</h2>
+            <form className="register-form" onSubmit={handleSubmit}>
+                <h2>📝 Register</h2>
                 <input
                     type="email"
                     placeholder="Email Address"
@@ -50,13 +52,20 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
-                <button type="submit">Login</button>
-                <p className="login-footer">
-                    Don't have an account? <a href="/register">Register</a>
+                <input
+                    type="password"
+                    placeholder="Confirm Password"
+                    value={confirm}
+                    onChange={(e) => setConfirm(e.target.value)}
+                    required
+                />
+                <button type="submit">Register</button>
+                <p className="register-footer">
+                    Already have an account? <a href="/login">Login</a>
                 </p>
             </form>
         </div>
     );
 };
 
-export default Login;
+export default Register;

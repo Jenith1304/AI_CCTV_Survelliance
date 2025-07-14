@@ -1,6 +1,6 @@
 # mongo.py (or better, inside detection.py directly if already imported)
 from datetime import datetime
-from app.extensions import mongo  # make sure you're importing this correctly
+from extensions import mongo  # make sure you're importing this correctly
 
 def log_event(user_id, zone_name, face_id, helmet_status, event_type):
     try:

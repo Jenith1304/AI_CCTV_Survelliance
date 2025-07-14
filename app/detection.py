@@ -211,7 +211,7 @@ from datetime import datetime
 from ultralytics import YOLO
 import numpy as np
 from bson import ObjectId
-from app.extensions import mongo
+from extensions import mongo
 from app.utils.email_utils import send_alert_email
 
 # --- Paths ---

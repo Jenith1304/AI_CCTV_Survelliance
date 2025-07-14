@@ -2,7 +2,7 @@ from flask import Blueprint, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from bson import ObjectId
 from datetime import datetime, timedelta
-from app.extensions import mongo
+from extensions import mongo
 
 from datetime import datetime
 

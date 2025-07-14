@@ -1,0 +1,67 @@
+/* File: src/styles/NotFound.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    
+}
+
+.notfound-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 2rem;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+}
+
+.notfound-content {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+.notfound-content h1 {
+    font-size: 6rem;
+    margin: 0;
+    color: #ff6b6b;
+}
+
+.notfound-message {
+    font-size: 1.3rem;
+    margin: 1rem 0 2rem;
+}
+
+.notfound-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.notfound-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .notfound-content h1 {
+        font-size: 4rem;
+    }
+
+    .notfound-message {
+        font-size: 1.1rem;
+    }
+}

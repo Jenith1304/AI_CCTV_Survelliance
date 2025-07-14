@@ -4,7 +4,7 @@ from werkzeug.utils import secure_filename
 import os
 import cloudinary.uploader
 from datetime import datetime
-from app.extensions import mongo
+from extensions import mongo
 from detection import detect_image, detect_video
 import uuid
 from bson import ObjectId
@@ -101,4 +101,10 @@ def get_user_uploads():
     user_id = user["_id"]
 
     uploads = list(mongo.db.media.find({"user_id": user_id}, {"_id": 0}))
+    
+    # Convert ObjectId to str
+    for upload in uploads:
+        if 'user_id' in upload and isinstance(upload['user_id'], ObjectId):
+            upload['user_id'] = str(upload['user_id'])
+
     return jsonify(uploads), 200

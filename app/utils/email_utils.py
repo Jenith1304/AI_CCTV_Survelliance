@@ -3,7 +3,7 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from app.extensions import mongo
+from extensions import mongo
 from bson import ObjectId
 def get_email_settings(user):
     config = mongo.db.email_config.find_one({"user_id": ObjectId(user)})

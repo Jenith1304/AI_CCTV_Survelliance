@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
-from app.extensions import mongo
+from extensions import mongo
 from bson import ObjectId
 
 zones_bp = Blueprint("zones", __name__)

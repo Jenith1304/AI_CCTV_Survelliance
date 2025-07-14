@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
-from app.extensions import mongo
+from extensions import mongo
 from bson import ObjectId
 
 email_bp = Blueprint("email", __name__)
@@ -41,9 +41,16 @@ def get_email_config():
     user_id = user["_id"]
 
     config = mongo.db.email_config.find_one({"user_id": user_id}, {"_id": 0})
+    
     if not config:
-        return jsonify({})
+        return jsonify({}), 200
+
+    # Fix: Convert user_id to string before returning
+    if "user_id" in config and isinstance(config["user_id"], ObjectId):
+        config["user_id"] = str(config["user_id"])
+
     return jsonify(config), 200
+
 
 @email_bp.route("/email-config", methods=["DELETE"])
 @jwt_required()
