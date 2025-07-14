@@ -11,7 +11,9 @@ from extensions import mongo, jwt
 
 # --- Load Environment Variables ---
 # load_dotenv(os.path.join(os.path.dirname(__file__), 'app', '.env'))
-load_dotenv()  # It will load from app/.env if run from app/
+load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
+
+# load_dotenv()  # It will load from app/.env if run from app/
 
 # --- Initialize Flask App ---
 
