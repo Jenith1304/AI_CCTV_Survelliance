@@ -93,3 +93,21 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.ngrok-guide {
+    background-color: #f0f0f0;
+    border-left: 4px solid #4b7bec;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+.ngrok-guide code {
+    background-color: #e5e5e5;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+.ngrok-guide a {
+    color: #3b82f6;
+    text-decoration: underline;
+}

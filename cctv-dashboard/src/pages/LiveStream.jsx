@@ -9,15 +9,15 @@ const LiveStream = () => {
     const [error, setError] = useState('');
     const [userId, setUserId] = useState('');
 
-    // Fetch user ID from profile
+    const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
     useEffect(() => {
         const token = localStorage.getItem("token");
         if (token) {
             setAuthToken(token);
             api.get("/auth/profile")
                 .then(res => {
-                    console.log(res.data);
-                    setUserId(res.data._id); // Adjust if your profile sends differently
+                    setUserId(res.data._id);
                 })
                 .catch(() => {
                     setError("Failed to fetch user profile");
@@ -25,7 +25,6 @@ const LiveStream = () => {
         }
     }, []);
 
-    // Handle connecting to camera
     const handleConnect = async () => {
         if (!cameraURL.trim()) {
             setError("Please enter a camera URL.");
@@ -53,7 +52,6 @@ const LiveStream = () => {
         }
     };
 
-    // Handle reset
     const handleReset = () => {
         setCameraURL('');
         setConnected(false);
@@ -65,12 +63,23 @@ const LiveStream = () => {
         <div className="livestream-container">
             <h2 className="livestream-title">📡 Live Stream Viewer</h2>
 
+            <div className="ngrok-guide">
+                <h4>🌐 Convert Local Camera URL to Public using ngrok:</h4>
+                <ol>
+                    <li>Install <a href="https://ngrok.com/download" target="_blank" rel="noreferrer">ngrok</a></li>
+                    <li>Run: <code>ngrok http://192.168.30.7:8080</code></li>
+                    <li>Copy the public URL shown (e.g., <code>https://abcd1234.ngrok.io</code>)</li>
+                    <li>Append <code>/video</code> if needed (e.g., <code>https://abcd1234.ngrok.io/video</code>)</li>
+                    <li>Paste the full URL above and click "Start Stream"</li>
+                </ol>
+            </div>
+
             <div className="stream-input-card">
                 <label htmlFor="cameraURL">Camera Stream URL:</label>
                 <input
                     type="text"
                     id="cameraURL"
-                    placeholder="e.g., 0 (webcam) or rtsp://ip or http://192.168.30.244:8080/video"
+                    placeholder="e.g., http://192.168.30.244:8080/video or ngrok URL"
                     value={cameraURL}
                     onChange={(e) => setCameraURL(e.target.value)}
                     disabled={connected}
@@ -88,12 +97,10 @@ const LiveStream = () => {
                 <div className="stream-frame">
                     <h4>Live Feed:</h4>
                     <img
-                        src={`http://localhost:5000/api/stream/video-feed?user=${userId}`}
-
+                        src={`${API_BASE}/stream/video-feed?user=${userId}`}
                         alt="Live Feed"
                         className="video-frame"
                     />
-
                 </div>
             )}
         </div>
@@ -101,6 +108,3 @@ const LiveStream = () => {
 };
 
 export default LiveStream;
-
-
-
