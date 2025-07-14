@@ -10,9 +10,7 @@ import numpy as np
 from bson import ObjectId
 from extensions import mongo
 from app.utils.email_utils import send_alert_email
-import time
-
-time.sleep(0.05) 
+ 
 # --- Paths ---
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "weights", "best.pt")
 
@@ -22,7 +20,7 @@ LOG_PATH = os.path.join("logs", "zone_log.csv")
 
 # --- Initialization ---
 model = YOLO(MODEL_PATH)
-model.to('cpu')
+
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
 helmet_last_alert_time = None
@@ -106,9 +104,9 @@ def process_frame(frame, user=None):
     else:
         last_face_seen_time = timestamp
         face_absent_alert_sent = False
-    resized_frame = cv2.resize(frame, (640, 360)) 
+    # resized_frame = cv2.resize(frame, (640, 360)) 
     try:
-        results = model(resized_frame)[0]
+        results = model(frame)[0]
     except Exception as e:
         print(f"[ERROR] YOLO inference failed: {e}")
         return frame
